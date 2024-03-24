@@ -111,7 +111,8 @@ void mergeSort(int pData[], int l, int r)
 		j++;
 		k++;
 	}
-
+	DeAlloc(L);
+	DeAlloc(R);
 }
 
 // implement insertion sort
@@ -274,7 +275,7 @@ int main(void)
 		memcpy(pDataCopy, pDataSrc, dataSz*sizeof(int));
 		extraMemoryAllocated = 0;
 		start = clock();
-		heapSort(pDataCopy, 0, dataSz - 1);
+		heapSort(pDataCopy, dataSz - 1);
 		end = clock();
 		cpu_time_used = ((double) (end - start)) / CLOCKS_PER_SEC;
 		printf("\truntime\t\t\t: %.1lf\n",cpu_time_used);
