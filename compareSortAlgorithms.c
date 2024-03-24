@@ -73,7 +73,7 @@ void heapSort(int arr[], int n)
 // extraMemoryAllocated counts bytes of extra memory allocated
 void mergeSort(int pData[], int l, int r)
 {
-	int mid = size(pData) / 2;
+	int mid = Size(pData) / 2;
 	int i, j;
 	int k = l;
 	int size1 = mid - l + 1;
